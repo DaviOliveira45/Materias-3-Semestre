@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+            <section>
+                <form action="calculadora.php" method="post">
+                    <label for="num1">Primeiro número:</label>
+                    <input type="text" name="num1" id="idnum1" placeholder="Informe o primeiro número">
+    
+                    <br>
+    
+                    <label for="num2">Segundo número:</label>
+                    <input type="text" name="num2" id="idnum2" placeholder="Informe o segundo número">
+    
+                    <br>
+
+                    <label for="soma"><input type="radio" name="operacao" id="idsoma" value="soma">Somar</label>
+
+                    <br>
+
+                    <label for="raiz"><input type="radio" name="raiz" id="idraiz" value="raiz">Raiz Quadrada</label>
+    
+                    <input type="submit" value="Enviar" name="enviar">
+                    <input type="reset" value="Limpar Dados">
+                </form>
+            </section>
+        </header>
+</body>
+</html>

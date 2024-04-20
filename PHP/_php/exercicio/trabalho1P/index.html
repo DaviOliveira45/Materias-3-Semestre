@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function mascara(valor){
+        var valorAlterado = valor.value;
+        valorAlterado = valorAlterado.replace(/\D/g, "");
+
+        valorAlterado = valorAlterado.replace(/(\d+)(\d{2}))$/, "$1, $2");
+        valorAlterado = valorAlterado.replace(/(\d)(?=(\d{3}) + (?!\d))/g, "$1.");
+
+        valorAlterado = "R$" + valorAlterado;
+        valor.value = valorAlterado;
+
+    }
+</script>
+
+<body>
+    <header>
+        <h1>Dados do Cliente</h1>
+        <section>
+            <form action="info.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="idnome" placeholder="Informe seu nome">
+
+                <br>
+
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" id="idemail" placeholder="Informe seu E-mail">
+
+                <br>
+
+                <label for="assunto">Assunto:</label>
+                <input type="text" name="assunto" id="idassunto" placeholder="Informe o assunto">
+
+                <br>
+
+                <label for="valorcusto">Valor custo:</label>
+                <input type="text" name="valorcusto" id="idvalorcusto" placeholder="Informe o custo">
+
+                <br>
+
+                <label for="valorvenda">Valor venda:</label>
+                <input type="text" name="valorvenda" id="idvalorvenda" placeholder="Informe o valor da venda">
+
+                <br>
+
+                <label for="conteudo">Conteudo:</label>
+                <textarea name="conteudo" id="idconteudo" cols="30" rows="5" placeholder="Informe o conteudo"></textarea>
+
+                <input type="submit" value="Enviar" name="enviar">
+                <input type="reset" value="Limpar Dados">
+            </form>
+        </section>
+    </header>
+</body>
+</html>
